@@ -1,6 +1,10 @@
 
 package regexmatch;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.Scanner;
+
 
 public class Regexmatch {
 
@@ -12,9 +16,15 @@ public class Regexmatch {
         return str.matches(".*false.*");
     }
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         System.out.println(isTrue("True"));
         System.out.println(containsFalse("sdfghghgfhjdhds"));
+        Scanner sc = new Scanner(new FileReader("input.txt"));
+    
+        while(sc.hasNext()){
+            System.out.println(sc.nextLine());
+    }
+    
     }
     
 }
